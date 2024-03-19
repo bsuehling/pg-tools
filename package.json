@@ -1,0 +1,25 @@
+{
+  "name": "pg-tools",
+  "displayName": "PG Tools",
+  "description": "Language suport for PG Tools, a framework to create and execute program graphs",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pg",
+      "aliases": ["PG DSL", "pg"],
+      "extensions": [".pg"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pg",
+      "scopeName": "main.pg",
+      "path": "./syntaxes/pg.tmLanguage.json"
+    }]
+  }
+}
