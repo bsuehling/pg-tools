@@ -11,10 +11,32 @@
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.pg",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.pg",
+					"match": "\\b(graph|variables|states|init|transitions|guard|action|bool|int|enum|true|false|model|errors|transient|persistent|hazards|specify)\\b"
+				},
+				{
+					"name": "keyword.operator.temporal",
+					"match": "\\b(X|F|G|U|EX|EF|EG|EU|AX|AF|AG|AU)\\b"
+				},
+				{
+					"name": "keyword.operator.special",
+					"match": "\\->|:=|:|\\+|\\-|\\*|/|=|!=|<=|<|>=|>|!|\\||&|=>|<=>"
+				},
+				{
+					"name": "comment.line.number-sign",
+					"match": "#.*$"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\b-?(0|[1-9]\\d*)\\b"
+				},
+				{
+					"name": "constant.character",
+					"match": "\\b([A-Z][A-Z|a-z|\\d]*)\\b"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.pg",
