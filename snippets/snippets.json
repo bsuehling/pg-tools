@@ -1,0 +1,164 @@
+{
+    "Main file": {
+        "prefix": [
+            "main",
+            "module"
+        ],
+        "body": [
+            "model ${1:model_name} {",
+            "    errors {",
+            "        transient ${2:name_of_transient_error_graph}",
+            "        persistent ${3:name_of_persistent_error_graph}",
+            "    }",
+            "",
+            "    hazards {",
+            "        \"${4:name_of_first_hazard}\" {",
+            "            ${5:ltl_or_ctl_of_first_hazard}",
+            "        }",
+            "        \"${6:name_of_first_hazard}\" {",
+            "            ${7:ltl_or_ctl_of_second_hazard}",
+            "        }",
+            "    }",
+            "",
+            "    specify {",
+            "        \"${8:name_of_first_specification}\" {",
+            "            ${9:ltl_or_ctl_of_first_specification}",
+            "        }",
+            "        \"${10:name_of_first_specification}\" {",
+            "            ${11:ltl_or_ctl_of_first_specification}",
+            "        }",
+            "    }",
+            "}"
+        ],
+        "description": "The basic building block of the main.pg file. You can add arbitrarily many errors, hazards, and specifications after each other."
+    },
+    "Transient error": {
+        "prefix": [
+            "transient"
+        ],
+        "body": [
+            "transient ${1:name_of_transient_error_graph}"
+        ],
+        "description": "Define a new transient error graph"
+    },
+    "Persistent error": {
+        "prefix": [
+            "persistent"
+        ],
+        "body": [
+            "persistent ${1:name_of_persistent_error_graph}"
+        ],
+        "description": "Define a new persistent error graph"
+    },
+    "Hazard definition": {
+        "prefix": [
+            "hazard"
+        ],
+        "body": [
+            "\"${1:name_of_hazard}\" {",
+            "    ${2:ltl_or_ctl_of_hazard}",
+            "}"
+        ],
+        "description": "Define a new hazard"
+    },
+    "Specification": {
+        "prefix": [
+            "spec"
+        ],
+        "body": [
+            "\"${1:name_of_specification}\" {",
+            "    ${2:ltl_or_ctl_of_specification}",
+            "}"
+        ],
+        "description": "Define a new specification"
+    },
+    "Graph file": {
+        "prefix": [
+            "graph"
+        ],
+        "body": [
+            "graph ${1:graph_name} {",
+            "    states {",
+            "        ${2:name_of_first_state}",
+            "        ${3:name_of_second_state}",
+            "    }",
+            "",
+            "    vars {",
+            "        bool ${4:name_of_bool}",
+            "        int ${5:name_of_int} [${6:lower_bound_inclusive}..${7:upper_bound_inclusive}]",
+            "        enum ${8:name_of_enum} { ${9:value_1}, ${10:value_2}, ${11:value_3} }",
+            "    }",
+            "",
+            "    init: ${12:initial_state} {",
+            "        ${13:initial_formula}",
+            "    }",
+            "",
+            "    transitions {",
+            "        ${14:pre_state_one} -> ${15:post_state_one} {",
+            "            guard { ${16:guard_formula} }",
+            "            action { ${17:variable_name} := ${18:expression} }",
+            "        }",
+            "        ${19:pre_state_two} -> ${20:post_state_two} {}",
+            "    }",
+            "}"
+        ],
+        "description": "The basic building block of a program graph. You can add arbitrarily many variables, states, and transitions after each other."
+    },
+    "Bool definition": {
+        "prefix": [
+            "bool"
+        ],
+        "body": [
+            "bool ${1:name_of_bool}"
+        ],
+        "description": "Define a new bool variable"
+    },
+    "Integer definition": {
+        "prefix": [
+            "int"
+        ],
+        "body": [
+            "int ${1:name_of_int} [${2:lower_bound_inclusive}..${3:upper_bound_inclusive}]"
+        ],
+        "description": "Define a new int variable"
+    },
+    "Enum definition": {
+        "prefix": [
+            "enum"
+        ],
+        "body": [
+            "enum ${1:name_of_enum} { ${2:value_1}, ${3:value_2}, ${4:value_3} }"
+        ],
+        "description": "Define a new enum variable"
+    },
+    "New transition": {
+        "prefix": [
+            "transition"
+        ],
+        "body": [
+            "${1:pre_state} -> ${2:post_state} {",
+            "    guard { ${3:guard_formula} }",
+            "    action { ${4:variable_name} := ${5:expression} }",
+            "}"
+        ],
+        "description": "Define a new transition. Guard and action are optional"
+    },
+    "New guard": {
+        "prefix": [
+            "guard"
+        ],
+        "body": [
+            "guard { ${1:guard_formula} }"
+        ],
+        "description": "Define a new guard"
+    },
+    "New action": {
+        "prefix": [
+            "action"
+        ],
+        "body": [
+            "action { ${1:variable_name} := ${2:expression} }"
+        ],
+        "description": "Define a new transition. Guard and action are optional"
+    }
+}
