@@ -79,7 +79,7 @@
         "body": [
             "graph ${1:graph_name} {",
             "    states {",
-            "        ${2:name_of_first_state}",
+            "        ${2:name_of_first_state},",
             "        ${3:name_of_second_state}",
             "    }",
             "",

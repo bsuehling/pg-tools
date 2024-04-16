@@ -2,7 +2,10 @@
   "name": "pg-tools",
   "displayName": "PG Tools",
   "description": "Language suport for PG Tools, a framework to create and execute program graphs",
-  "publisher": "Benjamin Sühling",
+  "publisher": "bsuehling",
+  "repository": {
+    "url": "https://github.com/bsuehling/pg-tools"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.87.0"
