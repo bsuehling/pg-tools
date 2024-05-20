@@ -14,3 +14,8 @@ The language is part of the [pg-tools](https://github.com/ArianWeber/pg-tools) f
 ### 0.0.1
 
 Initial release
+
+### 0.0.2
+
+Changed:
+- Fix the order of `vars` and `states` blocks in "Graph file" snippet
