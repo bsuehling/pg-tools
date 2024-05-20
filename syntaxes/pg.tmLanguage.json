@@ -14,7 +14,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.pg",
-					"match": "\\b(graph|vars|states|init|transitions|guard|action|bool|int|enum|true|false|model|errors|transient|persistent|hazards|specify|nofaults)\\b"
+					"match": "\\b(graph|vars|states|init|transitions|guard|action|bool|int|enum|true|false|model|errors|transient|persistent|hazards|specify|nofaults|faults)\\b"
 				},
 				{
 					"name": "keyword.operator.temporal",

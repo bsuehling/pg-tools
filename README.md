@@ -19,3 +19,8 @@ Initial release
 
 Changed:
 - Fix the order of `vars` and `states` blocks in "Graph file" snippet
+
+### 0.0.3
+
+Changed:
+- Recognize `faults` as keyword
